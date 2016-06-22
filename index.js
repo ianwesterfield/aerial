@@ -5,7 +5,7 @@ $(document).ready(function() {
   function getPlaylist() {
     playlist = [];
     var hour = moment().format('HH');
-    var timeOfDay = hour >= 7 || hour <= 19 ? "day" : "night";
+    var timeOfDay = hour >= 7 && hour <= 19 ? "day" : "night";
 
     $.each(videos, function(idx, video) {
       $.each(video.assets, function(idx, asset) {
